@@ -1732,7 +1732,7 @@ def main():  # pragma: no cover
         exit_code = EXIT_ERROR
     except (KeyboardInterrupt, BrokenPipeError):
         sys.stderr.close()
-        exit_code = EXIT_SUCCESS
+        exit_code = EXIT_ERROR
     except Exception:
         msg = 'Local Exception.\n%s\n%s' % (traceback.format_exc(), sysinfo())
         exit_code = EXIT_ERROR
